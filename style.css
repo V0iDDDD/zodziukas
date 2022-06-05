@@ -1,0 +1,110 @@
+body {
+    --bg-color: #121213;
+    --text-color: #ffffff;
+    --tbd-color: #565758;
+    --absent-color: #3a3a3c;
+    --present-color: #b59f3b;
+    --correct-color: #538d4e;
+    --keys-color: #818384;
+    background-color: var(--bg-color);
+}
+
+.tile-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 76px;
+    height: 76px;
+}
+.tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    margin: 3px;
+    line-height: 70px;
+    text-transform: uppercase;
+    font: bold 40px Helvetica, sans-serif;
+    color: var(--text-color);
+}
+.tile[state='empty'] {
+    border: 2px solid var(--absent-color);
+}
+.tile[state='tbd'] {
+    border: 2px solid var(--tbd-color);
+    animation: letterEntered 0.1s ease-in-out;
+}
+@keyframes letterEntered {
+    0% { width: 70px; height: 70px; margin: 3px }
+    50% { width: 76px; height: 76px; margin: 0px }
+    100% { width: 70px; height: 70px; margin: 3px }
+}
+.tile[state='absent'] {
+    background-color: var(--absent-color);
+}
+.tile[state='present'] {
+    background-color: var(--present-color);
+}
+.tile[state='correct'] {
+    background-color: var(--correct-color);
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.row[error='y'] {
+    animation: rowShake 0.5s linear infinite;
+}
+@keyframes rowShake {
+    0% { left: 0px }
+    10% { left: -7px }
+    30% { left: 6px }
+    50% { left: -5px }
+    70% { left: 4px }
+    100% { left: 0px }
+}
+
+.alert-placeholder {
+    width: 20%;
+    margin: auto;
+    height: 0px;
+}
+.alert {
+    color: #121213;
+    width: auto;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1;
+}
+.alert[type='err'] {
+    animation: alertFade 0.3s ease-in 1.2s;
+}
+.alert[type='win'] {
+    animation: alertFade 0.3s ease-in 1.7s;
+}
+@keyframes alertFade {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.keyboard {
+    width: 50%;
+    margin: auto;
+}
+.key {
+    font-weight: bold;
+    margin: 3px;
+    width: 45px;
+    height: 60px;
+    background-color: var(--keys-color);
+}
+.key-big {
+    font: bold 30px Helvetica, sans-serif;
+    margin: 3px;
+    width: 70px;
+    height: 60px;
+    background-color: var(--keys-color);
+}

@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Žodžiukas</title>
+</head>
+<body>
+    <script src="all_words.js"></script>
+    <script src="common_words.js"></script>
+    <script src="index.js"></script>
+    <div class="container" style="padding: 20px; margin-top: 30px;">
+        <div id="alertPlaceholder" class="alert-placeholder"></div>
+        <div class="tile-grid mt-2">
+            <div class="row" id="r0" error="n">
+                <div class="tile-con">
+                    <div class="tile" id="l0" state="empty"></div>
+                </div>
+                <div class="tile-con">
+                    <div class="tile" id="l1" state="empty"></div>
+                </div>
+                <div class="tile-con">
+                    <div class="tile" id="l2" state="empty"></div>
+                </div>
+                <div class="tile-con">
+                    <div class="tile" id="l3" state="empty"></div>
+                </div>
+                <div class="tile-con">
+                    <div class="tile" id="l4" state="empty"></div>
+                </div>
+            </div>
+            <div class="row" id="r1" error="n">
+                <div class="tile-con">
+                    <div class="tile" id="l0" state="empty"></div>
+                </div>
+                <div class="tile-con">
+                    <div class="tile" id="l1" state="empty"></div>
+                </div>
+                <div class="tile-con">
+                    <div class="tile" id="l2" state="empty"></div>
+                </div>
+                <div class="tile-con">
+                    <div class="tile" id="l3" state="empty"></div>
+                </div>
+                <div class="tile-con">
+                    <div class="tile" id="l4" state="empty"></div>
+                </div>
+            </div>
+            <div class="row" id="r2" error="n">
+                <div class="tile-con">
+                    <div class="tile" id="l0" state="empty"></div>
+                </div>
+                <div class="tile-con">
+                    <div class="tile" id="l1" state="empty"></div>
+                </div>
+                <div class="tile-con">
+                    <div class="tile" id="l2" state="empty"></div>
+                </div>
+                <div class="tile-con">
+                    <div class="tile" id="l3" state="empty"></div>
+                </div>
+                <div class="tile-con">
+                    <div class="tile" id="l4" state="empty"></div>
+                </div>
+            </div>
+            <div class="row" id="r3" error="n">
+                <div class="tile-con">
+                    <div class="tile" id="l0" state="empty"></div>
+                </div>
+                <div class="tile-con">
+                    <div class="tile" id="l1" state="empty"></div>
+                </div>
+                <div class="tile-con">
+                    <div class="tile" id="l2" state="empty"></div>
+                </div>
+                <div class="tile-con">
+                    <div class="tile" id="l3" state="empty"></div>
+                </div>
+                <div class="tile-con">
+                    <div class="tile" id="l4" state="empty"></div>
+                </div>
+            </div>
+            <div class="row" id="r4" error="n">
+                <div class="tile-con">
+                    <div class="tile" id="l0" state="empty"></div>
+                </div>
+                <div class="tile-con">
+                    <div class="tile" id="l1" state="empty"></div>
+                </div>
+                <div class="tile-con">
+                    <div class="tile" id="l2" state="empty"></div>
+                </div>
+                <div class="tile-con">
+                    <div class="tile" id="l3" state="empty"></div>
+                </div>
+                <div class="tile-con">
+                    <div class="tile" id="l4" state="empty"></div>
+                </div>
+            </div>
+            <div class="row" id="r5" error="n">
+                <div class="tile-con">
+                    <div class="tile" id="l0" state="empty"></div>
+                </div>
+                <div class="tile-con">
+                    <div class="tile" id="l1" state="empty"></div>
+                </div>
+                <div class="tile-con">
+                    <div class="tile" id="l2" state="empty"></div>
+                </div>
+                <div class="tile-con">
+                    <div class="tile" id="l3" state="empty"></div>
+                </div>
+                <div class="tile-con">
+                    <div class="tile" id="l4" state="empty"></div>
+                </div>
+            </div>
+        </div>
+        <div class="keyboard mt-3">
+            <div class="row">
+                <button class="btn btn-secondary key" onclick="ltLettersInput(49)">Ą</button>
+                <button class="btn btn-secondary key" onclick="ltLettersInput(50)">Č</button>
+                <button class="btn btn-secondary key" onclick="ltLettersInput(51)">Ę</button>
+                <button class="btn btn-secondary key" onclick="ltLettersInput(52)">Ė</button>
+                <button class="btn btn-secondary key" onclick="ltLettersInput(53)">Į</button>
+                <button class="btn btn-secondary key" onclick="ltLettersInput(54)">Š</button>
+                <button class="btn btn-secondary key" onclick="ltLettersInput(55)">Ų</button>
+                <button class="btn btn-secondary key" onclick="ltLettersInput(56)">Ū</button>
+                <button class="btn btn-secondary key" onclick="ltLettersInput(187)">Ž</button>
+            </div>
+            <div class="row">
+                <button class="btn btn-secondary key" onclick="lettersInput(81)">Q</button>
+                <button class="btn btn-secondary key" onclick="lettersInput(87)">W</button>
+                <button class="btn btn-secondary key" onclick="lettersInput(69)">E</button>
+                <button class="btn btn-secondary key" onclick="lettersInput(82)">R</button>
+                <button class="btn btn-secondary key" onclick="lettersInput(84)">T</button>
+                <button class="btn btn-secondary key" onclick="lettersInput(89)">Y</button>
+                <button class="btn btn-secondary key" onclick="lettersInput(85)">U</button>
+                <button class="btn btn-secondary key" onclick="lettersInput(73)">I</button>
+                <button class="btn btn-secondary key" onclick="lettersInput(79)">O</button>
+                <button class="btn btn-secondary key" onclick="lettersInput(80)">P</button>
+            </div>
+            <div class="row">
+                <button class="btn btn-secondary key" onclick="lettersInput(65)">A</button>
+                <button class="btn btn-secondary key" onclick="lettersInput(83)">S</button>
+                <button class="btn btn-secondary key" onclick="lettersInput(68)">D</button>
+                <button class="btn btn-secondary key" onclick="lettersInput(70)">F</button>
+                <button class="btn btn-secondary key" onclick="lettersInput(71)">G</button>
+                <button class="btn btn-secondary key" onclick="lettersInput(72)">H</button>
+                <button class="btn btn-secondary key" onclick="lettersInput(74)">J</button>
+                <button class="btn btn-secondary key" onclick="lettersInput(75)">K</button>
+                <button class="btn btn-secondary key" onclick="lettersInput(76)">L</button>
+            </div>
+            <div class="row">
+                <button class="btn btn-secondary key-big" style="font-size: 12px;" onclick="enterInput()">ENTER</button>
+                <button class="btn btn-secondary key" onclick="lettersInput(90)">Z</button>
+                <button class="btn btn-secondary key" onclick="lettersInput(88)">X</button>
+                <button class="btn btn-secondary key" onclick="lettersInput(67)">C</button>
+                <button class="btn btn-secondary key" onclick="lettersInput(86)">V</button>
+                <button class="btn btn-secondary key" onclick="lettersInput(66)">B</button>
+                <button class="btn btn-secondary key" onclick="lettersInput(78)">N</button>
+                <button class="btn btn-secondary key" onclick="lettersInput(77)">M</button>
+                <button class="btn btn-secondary key-big" onclick="backspaceInput()">⇦</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
